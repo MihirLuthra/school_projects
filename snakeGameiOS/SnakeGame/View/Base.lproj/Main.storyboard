@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fiB-mK-6s0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SnakeGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="mainView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLH-pS-K9r">
+                                <rect key="frame" x="345" y="637" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Quit"/>
+                                <connections>
+                                    <action selector="quit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B5V-jF-r4Y"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USw-zd-Jbp">
+                                <rect key="frame" x="0.0" y="646" width="42" height="21"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vLH-pS-K9r" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GWd-7w-Z4s"/>
+                            <constraint firstItem="USw-zd-Jbp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="noE-RH-BDa"/>
+                            <constraint firstItem="vLH-pS-K9r" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rsi-vU-Qyv"/>
+                            <constraint firstItem="USw-zd-Jbp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uMT-nA-DyZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="2eJ-XF-Aue"/>
+                        <outlet property="scoreLabel" destination="USw-zd-Jbp" id="ZrX-hG-c0S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="175"/>
+        </scene>
+        <!--Start View Controller-->
+        <scene sceneID="3rU-cy-TGA">
+            <objects>
+                <viewController id="fiB-mK-6s0" customClass="StartViewController" customModule="SnakeGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bak-cl-Rhp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="DcD-s3-lUG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64n-Xh-qxE">
+                                <rect key="frame" x="92" y="292.5" width="190" height="82"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="60"/>
+                                <state key="normal" title="Start Game"/>
+                                <connections>
+                                    <action selector="playGame:" destination="fiB-mK-6s0" eventType="touchUpInside" id="H96-gH-ryK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kvx-si-jOI">
+                                <rect key="frame" x="92" y="416" width="190" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWc-Or-6YN">
+                                <rect key="frame" x="302" y="637" width="73" height="30"/>
+                                <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Quit Game"/>
+                                <connections>
+                                    <action selector="quitGame:" destination="fiB-mK-6s0" eventType="touchUpInside" id="Wpc-2t-0oF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xLf-R0-U0b" firstAttribute="trailing" secondItem="DcD-s3-lUG" secondAttribute="trailing" id="4up-j4-Kze"/>
+                            <constraint firstItem="ZWc-Or-6YN" firstAttribute="bottom" secondItem="xLf-R0-U0b" secondAttribute="bottom" id="5Cz-9g-QzR"/>
+                            <constraint firstItem="DcD-s3-lUG" firstAttribute="top" secondItem="xLf-R0-U0b" secondAttribute="top" id="DyO-YK-hPu"/>
+                            <constraint firstItem="xLf-R0-U0b" firstAttribute="bottom" secondItem="Kvx-si-jOI" secondAttribute="bottom" constant="201" id="GYX-qm-WSQ"/>
+                            <constraint firstItem="Kvx-si-jOI" firstAttribute="top" secondItem="Bak-cl-Rhp" secondAttribute="topMargin" constant="396" id="N5p-gd-Cf5"/>
+                            <constraint firstItem="Kvx-si-jOI" firstAttribute="leading" secondItem="xLf-R0-U0b" secondAttribute="leading" constant="92" id="PeN-9K-AW6"/>
+                            <constraint firstItem="64n-Xh-qxE" firstAttribute="centerY" secondItem="Bak-cl-Rhp" secondAttribute="centerY" id="Rkl-tr-XDc"/>
+                            <constraint firstItem="DcD-s3-lUG" firstAttribute="leading" secondItem="xLf-R0-U0b" secondAttribute="leading" id="nMb-VN-Ac4"/>
+                            <constraint firstItem="xLf-R0-U0b" firstAttribute="trailing" secondItem="Kvx-si-jOI" secondAttribute="trailing" constant="93" id="pe9-JN-y7o"/>
+                            <constraint firstItem="xLf-R0-U0b" firstAttribute="bottom" secondItem="DcD-s3-lUG" secondAttribute="bottom" id="piK-Kh-Cht"/>
+                            <constraint firstItem="ZWc-Or-6YN" firstAttribute="trailing" secondItem="xLf-R0-U0b" secondAttribute="trailing" id="sJV-Wa-zXt"/>
+                            <constraint firstItem="64n-Xh-qxE" firstAttribute="centerX" secondItem="Bak-cl-Rhp" secondAttribute="centerX" id="xZ6-t3-WkC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xLf-R0-U0b"/>
+                    </view>
+                    <connections>
+                        <outlet property="score" destination="Kvx-si-jOI" id="C2t-Xb-SaQ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="playGame" id="Vug-NO-2Rf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JNv-kj-Eav" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136.8" y="174.96251874062969"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="3" width="1000" height="1000"/>
+    </resources>
+</document>
